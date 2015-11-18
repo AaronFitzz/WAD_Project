@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet  href="index.xslt" type="text/xsl"?>
 <football>
+
+<!--- ManchesterUnited -->
     <league name="PremierLeague">
         <team name="ManchesterUnited">
             <player id="1">
@@ -80,7 +84,10 @@
                 <nationality>English</nationality>
             </player>
         </team>
-        <team id="Arsenal">
+		
+		
+<!---team Arsenal-->
+        <team name="Arsenal">
             <player id="12">
                 <name>Mathieu Debuchy</name>
                 <position>Defence</position>
@@ -159,7 +166,10 @@
                 <nationality>Columbian</nationality>
             </player>
         </team>
-    </league>
+</league>
+		
+<!--- realMadrid -->
+    
 	<league name="LaLiga">
 		<team name="RealMadrid">
 			<player id="23">
