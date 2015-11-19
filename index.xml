@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!--Link to stylesheet/XSLT-->
 <?xml-stylesheet  href="index.xslt" type="text/xsl"?>
+<!--This is our root tag-->
 <football>
-
-<!--- ManchesterUnited -->
-    <league name="PremierLeague">
+	<!--Premier League starts here-->
+	<league name="PremierLeague">
+		<!--Manchester United starts here-->
         <team name="ManchesterUnited">
             <player id="1">
                 <name>David de Gea</name>
@@ -86,7 +87,7 @@
         </team>
 		
 		
-<!---team Arsenal-->
+		<!---Arsenal starts here-->
         <team name="Arsenal">
             <player id="12">
                 <name>Mathieu Debuchy</name>
@@ -166,11 +167,11 @@
                 <nationality>Columbian</nationality>
             </player>
         </team>
-</league>
+	</league>
 		
-<!--- realMadrid -->
-    
+	<!--La Liga starts here-->
 	<league name="LaLiga">
+		<!--Real Madrid starts here-->
 		<team name="RealMadrid">
 			<player id="23">
                 <name>Keylor Navas</name>
