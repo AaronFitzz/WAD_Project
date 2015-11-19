@@ -3,7 +3,7 @@
 
 <html>
 <head>
-		<title></title>
+		<title>web project</title>
 </head>
 <body>
 <table border="1">
