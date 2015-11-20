@@ -7,12 +7,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <html>
 <body>
  <table border="2">
-    <xsl:for-each select="football/league/team">
+    <xsl:for-each select="football/league/team/player">
     <tr>
 		<td> 
-			<xsl:attribute name="name">
-				<xsl:value-of select="@name"/>
-			</xsl:attribute>
+			<xsl:value-of select="name"/>
 		</td>
     </tr>
     </xsl:for-each>
