@@ -3,27 +3,20 @@
 
 <html>
 <head>
-		<title>web project .</title>
+		<title>WAD Prject</title>
 </head>
 <body>
 <table border="1">
-<tr bgcolor="#9acd32">
-<th>Leage</th>
-<th>Team</th>
-</tr>
-<tr>
-
-
-
-<td>
-<xsl:value-of select="//league//@name"/>
-</td>
-
-<td>
-<xsl:value-of select="//team/@name"/>
-</td>
-
-</tr>
+	<tr bgcolor="#9acd32">
+		<th>League</th>
+		<th>Team</th>
+	</tr>
+	<xsl:for-each select="football/league">
+	<tr>
+		<td><xsl:value-of select="@name"/></td>
+		<td><xsl:value-of select="team/@name"/></td>
+	</tr>
+	</xsl:for-each>
 </table>
 
 
