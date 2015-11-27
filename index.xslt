@@ -17,6 +17,24 @@
 		<td><xsl:value-of select="team/@name"/></td>
 	</tr>
 	</xsl:for-each>
+<tr bgcolor="#9acd32">
+<th>Leage</th>
+<th>Team</th>
+</tr>
+
+<xsl:for-each select="football//league">
+<tr>
+
+<td>
+<xsl:value-of select="@name"/>
+</td>
+
+<td>
+<xsl:value-of select="team/@name"/>
+</td>
+
+</tr>
+ </xsl:for-each>
 </table>
 
 
@@ -28,3 +46,4 @@
 
 </xsl:template>
 </xsl:stylesheet>
+
