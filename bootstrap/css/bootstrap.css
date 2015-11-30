@@ -12,6 +12,7 @@ html {
 }
 body {
   margin: 0;
+  color: white
 }
 article,
 aside,
@@ -240,6 +241,7 @@ th {
   }
   .navbar {
     display: none;
+	
   }
   .table td,
   .table th {
