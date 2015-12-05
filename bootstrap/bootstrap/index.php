@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		
-		//Javascript and css link to for the javascript slide 
+		<!-- Javascript and css link to for the javascript slide -->
 		<link href="themes/8/js-image-slider.css" rel="stylesheet" type="text/css" />
 		<script src="themes/8/js-image-slider.js" type="text/javascript"></script>
 		<link href="themes/8/tooltip.css" rel="stylesheet" type="text/css" />
@@ -37,7 +37,7 @@
 	
 	<div id="sliderFrame">
         <div id="slider">
-            <a href="http://www.menucool.com/javascript-image-slider" target="_blank">
+            <a href="http://www.realmadrid.com" target="_blank">
                 <img src="images/cristiano.jpg" alt="#cap1" />
             </a>
             <img src="images/rooney.jpg" alt="#cap2" />
@@ -47,28 +47,29 @@
         </div>
         <div style="display: none;">
             <div id="cap1">
-                Read more about <a href="http://www.menucool.com/">Ronaldo.com</a>.
+                Read more about <a href="http://www.realmadrid.com/en">Mardrid.com</a>.
             </div>
             <div id="cap2">
-                 Read more about <a href="http://www.menucool.com/">Ronaldo.com</a>.
+                 Read more about <a href="http://www.manchesterunited.com/en">Manchester United.com</a>.
             </div>
 			<div id="cap3">
-                 Read more about <a href="http://www.menucool.com/">Ronaldo.com</a>.
+                 Read more about <a href="http://www.fcbarcelona.com"/>Barcelona.com</a>.
             </div>
 			<div id="cap4">
-                 Read more about <a href="http://www.menucool.com/">Ronaldo.com</a>.
+                 Read more about <a href="http://www.realmadrid.com/en">Ronaldo.com</a>.
             </div>
 			<div id="cap5">
-                 Read more about <a href="http://www.menucool.com/">Ronaldo.com</a>.
+                 Read more about <a href="http://www.realmadrid.com/en">Ronaldo.com</a>.
             </div>
         </div>
     </div>
-		 <!--<div class="container">
-			<h1>Hello World!</h1>
-			<p>This is our demo site, I hope you like it!</p>
-			<p>All code can be found on my GitHub account, and is free to use, modify and sell!</p>
-			<p><a href="http://github.com/samcogan" target="_blank" class="btn btn-primary btn-lg">Show me the code!</a></p>
-		</div> -->
+		<div class="container">
+			<h1>Welcome to soccerAmy</h1>
+			<p>We will keep you update about the soccer fixture going on and also you can learn about the tops player in the world in this era</p>
+			<p>I hope you enjoy. Please keep in touch will us</p>
+			<p>Send us a email and will get back you .</p>
+			<p><a href="#contact" target="" class="btn btn-primary btn-lg">Take me to the email</a></p>
+		</div>
 	</div>
 	
 	
@@ -175,8 +176,11 @@
 	<div class="alt2">
 		<div class="container">
 			<footer>
-				&copy; Sam Cogan <br />
-				<a href="#home">Back to top</a>
+				<?php
+			//	&copy; Sam Cogan <br />
+				echo "Copyright &copy;  2015 - " . date("Y") . " AAA";
+				?>
+				<p> <a href="#home">Back to top</a> </p>				
 			</footer>
 		</div>
 	</div>
