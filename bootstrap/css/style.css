@@ -1,6 +1,6 @@
 .jumbotron
 {
-background-image:url('../bg.png');
+background-image:url('../bg1.jpg');
 background-attachment:fixed;
 min-height:500px;
 margin-bottom:0px;
@@ -8,7 +8,7 @@ margin-bottom:0px;
 
 .alt1
 {
-background:#eee;
+background:#E0FFFF;
 min-height:400px;
 }
 
