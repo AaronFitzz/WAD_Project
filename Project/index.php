@@ -230,7 +230,11 @@
 			//	&copy; Sam Cogan <br />
 				echo "Copyright &copy;  2015 - " . date("Y") . " AAA";
 				?>
-				<p> <a href="#home">Back to top</a> </p>				
+				<p> <a href="#home">Back to top</a> </p>
+				<?php
+				$xml=simplexml_load_file("rssfeed.xml");
+				print_r($xml);
+				?>
 			</footer>
 		</div>
 	</div>
