@@ -73,9 +73,10 @@
 	</div>
 	
 	
-	<div class="alt1 padding" id="about">
+		
+	<div class="alt3 padding" id="about">
 	<div class="container">
-					
+	
 			<?php
 			
 			// Load the XML source
@@ -92,6 +93,23 @@
 			echo $proc->transformToXML($xml);
 			
 			?>
+		
+		
+	
+	</div>	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="alt1 padding" id="about">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
 				<h2 class="text-center">Ronald</h2>
@@ -113,6 +131,38 @@
 		</div>
 	</div>	
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	<div class="container" id="portfolio">
