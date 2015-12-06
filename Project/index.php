@@ -152,7 +152,7 @@
 	</div>
 	
 	<div class="container padding" id="contact">
-		<form role="form">
+		<form role="form" action="post">
 			<div class="form-group">
 				<label for="email">Email:</label>
 				<input type="email" class="form-control" id="email" name="email" placeholder="example@example.com"/>
@@ -163,14 +163,32 @@
 			
 			</div>
 			<div class="form-group">
-				<label for="message">Message:</label>
-				<textarea class="form-control" name="message" id="message" placeholder="Your message here"></textarea>
+				<label for="message">Feedback:</label>
+				<textarea class="form-control" name="feedback" id="message" placeholder="Your message here"></textarea>
 			</div>
-			<div class="form-group">
-				<input type="checkbox" /> Send me promotional content
-			</div>
-			<button type="submit" class="btn btn-default">Submit</button>
+			<button type="submit" class="btn btn-default" name="submit" value="Submit">Submit</button>
 		</form>
+		<?php
+
+    //Connect to the database
+    if(isset($_POST["submit"])){
+    $host = "127.0.0.1";
+    $user = "x14715335";                     //Your Cloud 9 username
+    $pass = "";                                 //Remember, there is NO password by default!
+    $db = "project";                          //Your database name you want to connect to
+    $port = 3306;                               //The port #. It is always 3306
+
+    $connection = mysqli_connect($host, $user, $pass, $db, $port)or die(mysql_error());
+    
+	if ($connection->connect_error) {
+	die("Connection failed: " . $connection->connect_error);
+	}
+    //And now to perform a simple query to make sure it's working
+   $sql = "INSERT INTO suggestions (email,name,feedback) VALUES('".$_POST[email]."','".$_POST[name]."','".$_POST[feedback]."')";
+    
+   $connection->close();
+}
+?>
 	</div>
 	
 	<div class="alt2">
