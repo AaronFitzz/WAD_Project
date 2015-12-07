@@ -152,7 +152,7 @@
 	</div>
 	
 	<div class="container padding" id="contact">
-		<form role="form" action="post">
+		<form role="form" method="post">
 			<div class="form-group">
 				<label for="email">Email:</label>
 				<input type="email" class="form-control" id="email" name="email" placeholder="example@example.com"/>
@@ -185,6 +185,7 @@
 	}
     //And now to perform a simple query to make sure it's working
    $sql = "INSERT INTO suggestions (email,name,feedback) VALUES('".$_POST[email]."','".$_POST[name]."','".$_POST[feedback]."')";
+   $connection->query($sql);
     
    $connection->close();
 }
