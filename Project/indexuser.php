@@ -17,7 +17,7 @@ if (file_exists('users.xml')) {
     //transforming the object in xml format
     $xmlFormat = $xml->asXML();
     //displaying the element in proper format
-    echo '<u><b>This is the xml code from test2.xml:</b></u>
+    echo '<u><b>This is the xml code from users.xml:</b></u>
      <br /><br />
      <pre>' . htmlentities($xmlFormat, ENT_COMPAT | ENT_HTML401, "ISO-8859-1") . '</pre><br /><br />';
 
@@ -31,20 +31,21 @@ if (file_exists('users.xml')) {
     //transforming the object in xml format
     $xmlFormat = $xml->asXML();
     //displaying the element in proper format
-    echo '<u><b>This is the xml code from test2.xml with new elements added:</b></u>
+    echo '<u><b>This is the xml code from users.xml with new elements added:</b></u>
      <br /><br />
      <pre>' . htmlentities($xmlFormat, ENT_COMPAT | ENT_HTML401, "ISO-8859-1") . '</pre>';
 
     //changing the nodes values
     //in this case we are changing the value 
     //of all children called <name>
-    foreach ($xml->children() as $child)
-        $child->genre = "CHANGED";
+    // foreach ($xml->children() as $child)
+      //  $child->user = "new data";
     //displaying the element in proper format
-    echo '<br /><u><b>This is the xml code from users.xml with all genre changed:</b></u>
-     <br /><br />
-     <pre>' . htmlentities($xml->asXML(), ENT_COMPAT | ENT_HTML401, "ISO-8859-1") . '</pre>';
-} else {
+   // echo '<br /><u><b>This is the xml code from users.xml with all genre changed:</b></u>
+   //  <br /><br />
+     //<pre>' . htmlentities($xml->asXML(), ENT_COMPAT | ENT_HTML401, "ISO-8859-1") . '</pre>'; 
+} 
+else {
     exit('Failed to open users.xml.');
 }
     file_put_contents('/home/ubuntu/workspace/users.xml', $xml->asXML());

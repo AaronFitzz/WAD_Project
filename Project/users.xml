@@ -3,15 +3,15 @@
 <infomation>
    <user id="bk101">
 		<player>Bob Murpy</player>
-		<team>man u</team>
+		<team>Manchester United</team>
 		<rating>CHANGED</rating>
-      <description>great</description>
+      <description>Smart Player</description>
    </user>
      <user id="bk102">
 		<player>John moran</player>
-		<team>asnael</team>
+		<team>Arsenal</team>
 		<rating>CHANGED</rating>
-      <description>say something</description>
+      <description>There style of playing is great</description>
    </user>
    
 </infomation>

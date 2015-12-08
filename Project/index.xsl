@@ -6,43 +6,13 @@
 		<title>web project .</title>
 </head>
 <body>
-<div style="margin-left:15%">
-
-<table style="float:left;margin-right: 1cm" border="1">
-<tr bgcolor="orange">
-<th>Leage</th>
-</tr>
-
-<xsl:for-each select="football/league">
-<tr>
-
-<td>
-<xsl:value-of select="@name"/>
-</td>
-
-</tr>
- </xsl:for-each>
-</table>
-
-<table style="float:left;margin-right: 1cm" border="1">
-<tr bgcolor="orange">
-<th>Team</th>
-</tr>
-
-<xsl:for-each select="football/league">
-<tr>
-
-<td>
-<xsl:value-of select="team/@name"/>
-</td>
-
-</tr>
- </xsl:for-each>
-</table>
+<div style="margin-left:8%">
 
 
-<table style="float:left;margin-right: 1cm" border="1">
-<tr bgcolor="orange">
+
+
+<table style="float:left;margin-right: 5cm" border="1">
+<tr bgcolor="FFFFCC">
 <th>ManchesterUnited Players</th>
 </tr>
 
@@ -58,8 +28,8 @@
 </table>
 
 
-<table style="float:left;margin-right: 1cm" border="1">
-<tr bgcolor="orange">
+<table style="float:left;margin-right: 5cm" border="1">
+<tr bgcolor="FFFFCC">
 <th>Arsenal Players</th>
 </tr>
 
@@ -77,8 +47,8 @@
 
 
 
-<table style="float:left;margin-right: 1cm" border="1">
-<tr bgcolor="orange">
+<table style="float:left;margin-right: 5cm" border="1">
+<tr bgcolor="FFFFCC">
 <th>RealMadrid Players</th>
 </tr>
 

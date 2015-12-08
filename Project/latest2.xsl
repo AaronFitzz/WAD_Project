@@ -5,14 +5,14 @@
 		<head>
 		 <link href="xsl.css" rel="stylesheet" type="text/css" />
         <style type="text/css">
-            
+            body { font-size:1.34em; }
         </style>
 			<title></title>
 		</head>
 		<body>
 			
 			<div id="logo">
-			<h1 style="text-align:left;" ><b></b>RSS FEED<b></b></h1>
+			<h1 style="text-align:left; background-color:; " ><b></b>RSS FEED<b></b></h1>
 			<xsl:element name="a">
 				<xsl:attribute name="href">
 					<xsl:value-of select="channel/link" />

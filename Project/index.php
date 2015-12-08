@@ -100,7 +100,7 @@
 
 	<div class="container">
 		<div class="row">
-			<h1>News</h1>
+			<h1 style="background-color:blue;margin-left:30px;color: white;">News</h1>
 			<div class="col-md-4">
 				<h2 class="text-center">Athletics</h2>
 				<p class="text-justify">Oscar Pistorius is to appeal to South Africa's highest court after he was convicted of his girlfriend's murder. </p>
@@ -145,19 +145,30 @@
 				<p class="text-justify">Louis van Gaal gambled on Wayne Rooney but once over 30 most strikers are on the wane  </p>
 				<p>The last time Manchester United travelled to Wolfsburg they also did so on the back of playing West Ham in the Premier League, although December 2009 was a different time in every sense.</p>
 			</div>
-		</div
+		</div>
 		
 		<hr />
 		
 		<div class="row padding" id="two">
-			<div class="col-md-6">
-				<h2 class="text-center">Work 2</h2>
-				<p class="text-justify">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				
-			</div>
-			<div class="col-md-6">
-				<img src="images/2.png" class="img-circle img-responsive" alt="Circular holding image"/>
-			</div>
+			<div class="col-md-12">
+					<?php
+			
+			// Load the XML source
+			$xml = new DOMDocument;
+			$xml->load('fixtures.xml');
+			
+			$xsl = new DOMDocument;
+			$xsl->load('fixtures.xsl');
+			
+			// Configure the transformer
+			$proc = new XSLTProcessor;
+			$proc->importStyleSheet($xsl); // attach the xsl rules
+			
+			echo $proc->transformToXML($xml);
+			
+			?>
+			
+		</div>
 		</div>
 		<hr />
 		<div class="row padding" id="three">
@@ -176,10 +187,8 @@
 
 	<div class="container padding" id="contact">
 		<div class="col-md-12">
-		
-		<?php
-			
-			// Load the XML source
+			<?php
+		// Load the XML source
 			$xml = new DOMDocument;
 			$xml->load('latest.xml');
 			
@@ -189,10 +198,11 @@
 			// Configure the transformer
 			$proc = new XSLTProcessor;
 			$proc->importStyleSheet($xsl); // attach the xsl rules
-	
+			
 			echo $proc->transformToXML($xml);
 			
 			?>
+	
 			</div>
 		</div>
 	
