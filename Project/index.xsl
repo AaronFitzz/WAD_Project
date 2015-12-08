@@ -6,9 +6,10 @@
 		<title>web project .</title>
 </head>
 <body>
-<div style="margin-left:33%">
+<div style="margin-left:15%">
+
 <table style="float:left;margin-right: 1cm" border="1">
-<tr bgcolor="#9acd32">
+<tr bgcolor="orange">
 <th>Leage</th>
 </tr>
 
@@ -24,7 +25,7 @@
 </table>
 
 <table style="float:left;margin-right: 1cm" border="1">
-<tr bgcolor="#9acd32">
+<tr bgcolor="orange">
 <th>Team</th>
 </tr>
 
@@ -41,7 +42,7 @@
 
 
 <table style="float:left;margin-right: 1cm" border="1">
-<tr bgcolor="#9acd32">
+<tr bgcolor="orange">
 <th>ManchesterUnited Players</th>
 </tr>
 
@@ -58,7 +59,7 @@
 
 
 <table style="float:left;margin-right: 1cm" border="1">
-<tr bgcolor="#9acd32">
+<tr bgcolor="orange">
 <th>Arsenal Players</th>
 </tr>
 
@@ -76,11 +77,8 @@
 
 
 
-
-
-
 <table style="float:left;margin-right: 1cm" border="1">
-<tr bgcolor="#9acd32">
+<tr bgcolor="orange">
 <th>RealMadrid Players</th>
 </tr>
 
