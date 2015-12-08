@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="latest2.xsl" ?>
+ 
+<rss version="2.0">
+	<channel>
+	 <image>
+		<title>Scocer Army</title>
+		<url>http://www.w3schools.com/images/w3schools_green.jpg</url>
+		<link>http://www.xefteri.com</link>
+		<description>The latest articles from ScocerArmy</description>
+		<language>en-us</language>
+		<copyright>Copyright 2005 SoccerArmy.com</copyright>
+		<lastBuildDate>Mon, 07 Mar 2005 00:00:00 MST</lastBuildDate>
+		
+	 </image>
+		<item>
+			<title>Ronaldo did it again</title> 
+			<description>Ronaldo scored 3 goklas again. this guy is just on fire .</description>
+			<pubDate>Sun, 12 Dec 2015 00:00:00 MST</pubDate>
+			<link>http://www.xefteri.com/articles/show.cfm?id=24</link>
+		</item>
+	
+		<item>
+			<title>Messie got the win goals again manchester united </title> 
+			<description>The little man can stop scoring like ronaldo. There was 6 minutne left when the arg linked up xavi and shoot from  20 yards out</description>
+			<pubDate>Sun, 12 Dec 2015 00:00:00 MST</pubDate>
+			<link>http://www.xefteri.com/articles/show.cfm?id=24</link>
+		</item>
+
+	</channel>
+</rss>

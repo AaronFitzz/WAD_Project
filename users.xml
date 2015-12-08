@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--<?xml-stylesheet href="books.xsl" type="text/xsl"?> -->
+<infomation>
+   <user id="bk101">
+		<player>Bob Murpy</player>
+		<team>man u</team>
+		<rating>CHANGED</rating>
+      <description>great</description>
+   <genre>CHANGED</genre></user>
+     <user id="bk102">
+		<player>John moran</player>
+		<team>asnael</team>
+		<rating>CHANGED</rating>
+      <description>say something</description>
+   <genre>CHANGED</genre></user>
+   
+<user><player>ronald</player><team>man u</team><rating>10</rating><description>class</description><genre>CHANGED</genre></user></infomation>

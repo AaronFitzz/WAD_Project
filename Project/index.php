@@ -74,7 +74,7 @@
 	
 	
 		
-	<div class="alt3 padding" id="about">
+	<div id="about">
 	<div class="container">
 	
 			<?php
@@ -104,26 +104,30 @@
 	
 	
 	
-	
-	
 	<div class="alt1 padding" id="about">
 	<div class="container">
 		<div class="row">
+			<h1>News</h1>
 			<div class="col-md-4">
-				<h2 class="text-center">Ronald</h2>
-				<p class="text-justify">Cristiano Ronaldo dos Santos Aveiro GOIH, known as Cristiano Ronaldo, is a Portuguese professional footballer who plays for Spanish club Real Madrid and the Portugal national team. He is a forward and serves as captain for Portugal. </p>
-				<a href="#one" class="btn btn-default">Tell me more..</a>
-				
+				<h2 class="text-center">Athletics</h2>
+				<p class="text-justify">Oscar Pistorius is to appeal to South Africa's highest court after he was convicted of his girlfriend's murder. </p>
+				<img src="images/oscar.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+				<a href="http://www.skysports.com/more-sports/athletics/news/29172/10092938/oscar-pistorius-to-appeal-murder-conviction-at-constitutional-court" class="btn btn-default" target="_blank">Tell me more..</a>
+
 			</div>
 			<div class="col-md-4">
-				<h2 class="text-center">Rooney</h2>
-				<p class="text-justify">Wayne Mark Rooney /ˈruːni/ is an English professional footballer who plays for and captains both Manchester United and the England national team. He has played much of his career as a forward, but he has also been used in various midfield roles.</p>
-				<a href="#two" class="btn btn-default">Tell me more..</a>
+				<h2 class="text-center">Football</h2>
+				<p class="text-justify">Lukaku proud of milestone</p>
+				<img src="images/l.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+				<a href="http://www.skysports.com/football/news/11671/10092969/romelu-lukaku-happy-to-have-rescued-point-for-everton-against-crystal-palace" class="btn btn-default" target="_blank">Tell me more..</a>
+
 			</div>
 			<div class="col-md-4">
-				<h2 class="text-center">Ashley Young</h2>
-				<p class="text-justify">Ashley Simon Young is an English professional footballer who plays as a winger for Manchester United and the English national team. Born and raised in Hertfordshire, Young's father was from Jamaica. </p>
-				<a href="#three" class="btn btn-default">Tell me more..</a>
+				<h2 class="text-center">Football</h2>
+				<p class="text-justify">Sir Alex: Leicester can win title</p>
+				<img src="images/jamie.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+				<a href="http://www.skysports.com/football/news/11712/10092532/sir-alex-ferguson-says-leicester-city-can-win-the-premier-league" class="btn btn-default" target="_blank">Tell me more..</a>
+
 			</div>
 		
 		</div>
@@ -141,14 +145,15 @@
 	<div class="container" id="portfolio">
 		<div class="row padding" id="one">
 			<div class="col-md-6">
-				<img src="images/1.png" class="img-circle img-responsive" alt="Circular holding image"/>
+				<img src="images/roo.jpg"  alt="Circular holding image"/>
 			</div>
 			<div class="col-md-6">
-				<h2 class="text-center">Work 1</h2>
-				<p class="text-justify">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				
+				<h2 class="text-center">Soccer Army</h2>
+				<p class="text-justify">Louis van Gaal gambled on Wayne Rooney but once over 30 most strikers are on the wane  </p>
+				<p>The last time Manchester United travelled to Wolfsburg they also did so on the back of playing West Ham in the Premier League, although December 2009 was a different time in every sense.</p>
 			</div>
-		</div>	
+		</div
+		
 		<hr />
 		
 		<div class="row padding" id="two">
@@ -167,12 +172,43 @@
 				<img src="images/3.png" class="img-circle img-responsive" alt="Circular holding image"/>
 			</div>
 			<div class="col-md-6">
-				<h2 class="text-center">Work 3</h2>
-				<p class="text-justify">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>	
+				<h2 class="text-center">RSS FEEDS</h2>
+				<p class="text-justify"></p>	
+		
 			</div>
 		</div>
 		<hr />
 	</div>
+
+
+	<div class="container padding" id="contact">
+		<div class="col-md-12">
+		
+		<?php
+			
+			// Load the XML source
+			$xml = new DOMDocument;
+			$xml->load('latest.xml');
+			
+			$xsl = new DOMDocument;
+			$xsl->load('latest2.xsl');
+			
+			// Configure the transformer
+			$proc = new XSLTProcessor;
+			$proc->importStyleSheet($xsl); // attach the xsl rules
+	
+			echo $proc->transformToXML($xml);
+			
+			?>
+			</div>
+		</div>
+	
+
+	<br />
+	
+	
+	
+	
 	
 	<div class="container padding" id="contact">
 		<form role="form" method="post">
@@ -190,7 +226,12 @@
 				<textarea class="form-control" name="feedback" id="message" placeholder="Your message here"></textarea>
 			</div>
 			<button type="submit" class="btn btn-default" name="submit" value="Submit">Submit</button>
+			
 		</form>
+		
+		
+		
+		
 		<?php
 
     //Connect to the database
@@ -231,7 +272,7 @@
 		</div>
 	</div>
 	
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script>
 	$(function() {
