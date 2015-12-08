@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="/rss">
-	<html>
-		<head>
-		 <link href="xsl.css" rel="stylesheet" type="text/css" />
+    <html>
+    <head>
+        <link href="xsl.css" rel="stylesheet" type="text/css" />
         <style type="text/css">
-            
+            body {
+                font-size:0.83em;
+            }
         </style>
-			<title></title>
-		</head>
-		<body>
-			
-			<div id="logo">
-			<h1 style="text-align:left;" ><b></b>RSS FEED<b></b></h1>
-			<xsl:element name="a">
-				<xsl:attribute name="href">
-					<xsl:value-of select="channel/link" />
-				</xsl:attribute>
-				<xsl:value-of select="channel/title" />
-			</xsl:element>
-			</div>
-		<div class="Snippet" style="border-width:0; background-color:#FFF; margin:1em">
+    </head>
+    <body>
+        <div id="logo">
+            <xsl:element name="a">
+                <xsl:attribute name="href">
+                    <xsl:value-of select="channel/link" />
+                </xsl:attribute>
+                <xsl:value-of select="channel/title" />
+            </xsl:element>
+        </div>
+        <div class="Snippet" style="border-width:0; background-color:#FFF; margin:1em">
             <div class="titleWithLine">
                 <xsl:value-of select="channel/description" />
             </div>
@@ -44,9 +43,7 @@
         <div id="footer">
             <xsl:value-of select="channel/copyright" />
         </div>
-		
-		</body>
-	</html>
+    </body>
+    </html>
 </xsl:template>
 </xsl:stylesheet>
-

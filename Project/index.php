@@ -62,6 +62,7 @@
                  Read more about <a href="http://www.realmadrid.com/en">Ronaldo.com</a>.
             </div>
         </div>
+        
     </div>
 		<div class="container">
 			<h1>Welcome to soccerAmy</h1>
@@ -74,7 +75,7 @@
 	
 	
 		
-	<div id="about">
+	<div class="alt1 padding" id="about">
 	<div class="container">
 	
 			<?php
@@ -94,17 +95,9 @@
 			
 			?>
 	
-	</div>	
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="alt1 padding" id="about">
+
+
 	<div class="container">
 		<div class="row">
 			<h1>News</h1>
@@ -133,7 +126,7 @@
 		</div>
 	</div>	
 	</div>
-	
+		</div>
 	
 	
 	
@@ -243,7 +236,6 @@
     $port = 3306;                               //The port #. It is always 3306
 
     $connection = mysqli_connect($host, $user, $pass, $db, $port)or die(mysql_error());
-    $con = new mysqli ("127.0.0.1","asadmalik111","","project");
     
 	if ($connection->connect_error) {
 	die("Connection failed: " . $connection->connect_error);
@@ -265,10 +257,6 @@
 				echo "Copyright &copy;  2015 - " . date("Y") . " AAA";
 				?>
 				<p> <a href="#home">Back to top</a> </p>
-				<?php
-				$xml=simplexml_load_file("rssfeed.xml");
-				print_r($xml);
-				?>
 			</footer>
 		</div>
 	</div>
