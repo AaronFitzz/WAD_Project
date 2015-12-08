@@ -173,7 +173,7 @@
 			</div>
 			<div class="col-md-6">
 				<h2 class="text-center">RSS FEEDS</h2>
-				<p class="text-justify"></p>	
+				<p class="text-justify">i love you</p>	
 		
 			</div>
 		</div>
