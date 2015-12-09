@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Bootstrap Tutorial</title>
+		<title>SoccerArmy</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
@@ -23,12 +23,13 @@
 				Menu
 			</button>
 			<div class="collapse navbar-collapse navHeaderCollapse">
-				<ul class="nav navbar-nav navbar-right">
+				<h4 class="nav navbar-nav navbar-right">
 					<li><a href="#">Home</a></li>
-					<li><a href="#about">About</a></li>
+					<li><a href="#about">Players</a></li>
 					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
+					<li><a href="#fixtures">Fixtures</a></li>
+					<li><a href="#contact">RSS Feed</a></li>
+				</h4>
 			</div>
 		</div>
 	</div>
@@ -37,46 +38,50 @@
 	
 	<div id="sliderFrame">
         <div id="slider">
-            <a href="http://www.realmadrid.com" target="_blank">
-                <img src="images/cristiano.jpg" alt="#cap1" />
-            </a>
+            <img src="images/cronaldo.jpg" alt="#cap1" />
             <img src="images/rooney.jpg" alt="#cap2" />
             <img src="images/azeez.jpg" alt="#cap3" />
             <img src="images/neymar.jpg" alt="#cap4" />
             <img src="images/SERGIO.jpg" alt="#cap5" />
         </div>
         <div style="display: none;">
-            <div id="cap1">
-                Read more about <a href="http://www.realmadrid.com/en">Mardrid.com</a>.
+            <div id="cap5">
+                 See more at <a href="http://www.realmadrid.com/en">Real Madrid's site</a>.
             </div>
             <div id="cap2">
-                 Read more about <a href="http://www.manchesterunited.com/en">Manchester United.com</a>.
-            </div>
-			<div id="cap3">
-                 Read more about <a href="http://www.fcbarcelona.com"/>Barcelona.com</a>.
+                 See more at <a href="http://www.manchesterunited.com/en">Man Utd's site</a>.
             </div>
 			<div id="cap4">
-                 Read more about <a href="http://www.realmadrid.com/en">Ronaldo.com</a>.
+                 See more at <a href="http://www.fcbarcelona.com"/>Barcelona's site</a>.
             </div>
-			<div id="cap5">
-                 Read more about <a href="http://www.realmadrid.com/en">Ronaldo.com</a>.
+			<div id="cap1">
+                 See more at <a href="http://www.realmadrid.com/en">Ronaldo.com</a>.
+            </div>
+            <div id="cap3">
+                 See more at <a href="http://www.shamrockrovers.ie/">Shamrock Rovers site</a>.
             </div>
         </div>
         
     </div>
 		<div class="container">
-			<h1>Welcome to soccerAmy</h1>
-			<p>We will keep you update about the soccer fixture going on and also you can learn about the tops player in the world in this era</p>
-			<p>I hope you enjoy. Please keep in touch will us</p>
-			<p>Send us a email and will get back you .</p>
-			<p><a href="#contact" target="" class="btn btn-primary btn-lg">Take me to the email</a></p>
+				<div class="alt5">
+			<br />
+			<h1 class="headz">Welcome to SoccerArmy</h1>
+			<p>We're here to keep you up to date with all the</p>
+			<p>latest news in football and give you all the info you need</p>
+			<p>We hope you enjoy</p>
+			<p>Remember to leave feedback!</p>
+			<br />
+			<p><a href="#contact" target="" class="btn btn-primary btn-lg">Take me to the feedback form</a></p>
+			</div>
 		</div>
 	</div>
 	
 	
 		
-	<div class="alt1 padding" id="about">
+	<div class=" padding" id="about">
 	<div class="container">
+		<h1 style="background-color:#6092CF;margin-left:30px;color: white; border-radius: 20px; text-align:center;">Soccer Players</h1>
 	
 			<?php
 			
@@ -94,33 +99,36 @@
 			echo $proc->transformToXML($xml);
 			
 			?>
-	
 	</div>
-
+	</div>
+<hr />
 
 	<div class="container">
 		<div class="row">
-			<h1 style="background-color:blue;margin-left:30px;color: white;">News</h1>
+			<h1 style="background-color:#6092CF;margin-left:30px;color: white; border-radius: 20px; text-align:center;">Sports News</h1>
 			<div class="col-md-4">
 				<h2 class="text-center">Athletics</h2>
 				<p class="text-justify">Oscar Pistorius is to appeal to South Africa's highest court after he was convicted of his girlfriend's murder. </p>
 				<img src="images/oscar.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+				<h1  style="text-align:center;">
 				<a href="http://www.skysports.com/more-sports/athletics/news/29172/10092938/oscar-pistorius-to-appeal-murder-conviction-at-constitutional-court" class="btn btn-default" target="_blank">Tell me more..</a>
-
+				</h1>
 			</div>
 			<div class="col-md-4">
 				<h2 class="text-center">Football</h2>
-				<p class="text-justify">Lukaku proud of milestone</p>
+				<p class="text-justify">Lukaku proud of milestone</p><br/><br/>
 				<img src="images/l.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+				<h1  style="text-align:center;">
 				<a href="http://www.skysports.com/football/news/11671/10092969/romelu-lukaku-happy-to-have-rescued-point-for-everton-against-crystal-palace" class="btn btn-default" target="_blank">Tell me more..</a>
-
+				</h1>
 			</div>
 			<div class="col-md-4">
 				<h2 class="text-center">Football</h2>
-				<p class="text-justify">Sir Alex: Leicester can win title</p>
+				<p class="text-justify">Sir Alex: Leicester can win title</p><br/><br/>
 				<img src="images/jamie.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+				<h1  style="text-align:center;">
 				<a href="http://www.skysports.com/football/news/11712/10092532/sir-alex-ferguson-says-leicester-city-can-win-the-premier-league" class="btn btn-default" target="_blank">Tell me more..</a>
-
+				</h1>
 			</div>
 		
 		</div>
@@ -141,16 +149,19 @@
 				<img src="images/roo.jpg"  alt="Circular holding image"/>
 			</div>
 			<div class="col-md-6">
-				<h2 class="text-center">Soccer Army</h2>
-				<p class="text-justify">Louis van Gaal gambled on Wayne Rooney but once over 30 most strikers are on the wane  </p>
+				<h2 class="text-center">Man Utd vs Wolfsburg</h2>
+				<p class="text-justify">Louis van Gaal gambled on Wayne Rooney but once over 30 most strikers are past their prime</p>
 				<p>The last time Manchester United travelled to Wolfsburg they also did so on the back of playing West Ham in the Premier League, although December 2009 was a different time in every sense.</p>
 			</div>
 		</div>
 		
 		<hr />
 		
-		<div class="row padding" id="two">
-			<div class="col-md-12">
+		
+		<div  class="alt4 col-md-12" id="fixtures">
+			<h1 style="background-color:#6092CF;margin-left:30px;color: white; border-radius: 20px; text-align:center;">Fixtures</h1>
+			<br/>
+			
 					<?php
 			
 			// Load the XML source
@@ -167,9 +178,9 @@
 			echo $proc->transformToXML($xml);
 			
 			?>
-			
-		</div>
-		</div>
+		</div>	
+	<br />
+		<br />
 		<hr />
 		<div class="row padding" id="three">
 			<div class="col-md-6">
@@ -185,7 +196,7 @@
 	</div>
 
 
-	<div class="container padding" id="contact">
+	<div class="container padding"  id="contact">
 		<div class="col-md-12">
 			<?php
 		// Load the XML source

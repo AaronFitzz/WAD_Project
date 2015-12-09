@@ -6,10 +6,10 @@
 		<title>web project .</title>
 </head>
 <body>
-<div style="margin-left:0%">
+<div style="margin-left:0.5%">
 
 
-<table style="float:left;margin-right: 0.2cm" border="1">
+<table style="float:left;margin-right: 0.8cm" border="1">
 <tr bgcolor="FFFFCC">
 <th>Fixture Matchs RealMadrid </th>
 <th>Date</th>
@@ -33,7 +33,7 @@
 </table>
 
 
-<table style="float:left;margin-right: 0.2cm" border="1">
+<table style="float:left;margin-right: 0.8cm" border="1">
 <tr bgcolor="FFFFCC">
 <th>Fixture Matchs Man United </th>
 <th>Date</th>
@@ -57,7 +57,7 @@
 </table>
 
 
-<table style="float:left;margin-right: 0.2cm" border="1">
+<table style="float:left;margin-right:  0.8" border="1">
 <tr bgcolor="FFFFCC">
 <th>Fixture Matchs Arsenal </th>
 <th>Date</th>

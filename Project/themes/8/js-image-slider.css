@@ -11,9 +11,10 @@
     margin: 0 auto; /*center-aligned*/
 }
 
-#slider, #slider div.sliderInner {
+#slider, #slider div.sliderInner { 
     width:700px;height:306px;/* Must be the same size as the slider images */
     border-radius: 6px;
+    background-size: 100%;
 }
 
 #slider {

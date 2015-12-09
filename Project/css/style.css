@@ -1,15 +1,19 @@
 .jumbotron
 {
-background-image:url('../images/firefootball.jpg');
+background-image:url('../images/bg2.jpg');
 background-attachment:fixed;
-min-height:500px;
+background-repeat: no-repeat;
+min-height:100%;
+min-width:100%;
 margin-bottom:0px;
 }
 
 .alt1
 {
-background:#eee;
-min-height:400px;
+background:orange;
+padding-top:20px;
+padding-bottom:20px;
+
 }
 
 .alt2
@@ -23,7 +27,23 @@ text-align:center;
 .alt3
 {
 background:orange;
-min-height:400px;
+
+}
+
+.alt4{
+
+padding-top:20px;
+padding-bottom:20px;
+}
+
+.alt5{
+    color: black;
+    
+    /*-webkit-text-stroke-width: 0.3px;
+   -webkit-text-stroke-color: white;*/
+}
+.headz{
+text-align: center;
 }
 
 
