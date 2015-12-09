@@ -10,6 +10,8 @@ $team = $_POST["team"];
 $rating = $_POST["rating"];
 $description = $_POST["description"];
 
+
+
 if (file_exists('users.xml')) {
     //loads the xml and returns a simplexml object
     $xml = simplexml_load_file('users.xml');

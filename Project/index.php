@@ -12,12 +12,16 @@
 		<link href="themes/8/tooltip.css" rel="stylesheet" type="text/css" />
 		
 		
+		
+
+
+
 	</head>
 	<body>
-	<div class="navbar-static-top navbar-inverse" id="home">
+	<div class="navbar-static-top navbar-inverse" id="home" style="position: fixed; width:100%;">
 		<div class="container">
 			<div class="navbar-brand">
-				My Site
+				<img src="images/wadlogo.png"/>
 			</div>
 			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
 				Menu
@@ -25,15 +29,16 @@
 			<div class="collapse navbar-collapse navHeaderCollapse">
 				<h4 class="nav navbar-nav navbar-right">
 					<li><a href="#">Home</a></li>
-					<li><a href="#about">Players</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#players">Players</a></li>
+					<li><a href="#review">Review</a></li>
 					<li><a href="#fixtures">Fixtures</a></li>
-					<li><a href="#contact">RSS Feed</a></li>
+					<li><a href="#contact">RSS/Feedback</a></li>
 				</h4>
 			</div>
 		</div>
 	</div>
-	
+		<br />
+		<br />
 	<div class="jumbotron">
 	
 	<div id="sliderFrame">
@@ -79,7 +84,8 @@
 	
 	
 		
-	<div class=" padding" id="about">
+	<div class=" padding" id="players">
+		<br />
 	<div class="container">
 		<h1 style="background-color:#6092CF;margin-left:30px;color: white; border-radius: 20px; text-align:center;">Soccer Players</h1>
 	
@@ -102,7 +108,6 @@
 	</div>
 	</div>
 <hr />
-
 	<div class="container">
 		<div class="row">
 			<h1 style="background-color:#6092CF;margin-left:30px;color: white; border-radius: 20px; text-align:center;">Sports News</h1>
@@ -136,22 +141,35 @@
 	</div>
 		</div>
 	
-	
-	
-
-	
-	
-	
-	
-	<div class="container" id="portfolio">
+	<div class="container" id="review">
+		<br />
 		<div class="row padding" id="one">
-			<div class="col-md-6">
-				<img src="images/roo.jpg"  alt="Circular holding image"/>
-			</div>
-			<div class="col-md-6">
-				<h2 class="text-center">Man Utd vs Wolfsburg</h2>
-				<p class="text-justify">Louis van Gaal gambled on Wayne Rooney but once over 30 most strikers are past their prime</p>
-				<p>The last time Manchester United travelled to Wolfsburg they also did so on the back of playing West Ham in the Premier League, although December 2009 was a different time in every sense.</p>
+			<div class="col-md-12">
+				<form action="indexuser.php" method="post">
+					<h1 style="background-color:#6092CF;margin-left:30px;color: white; border-radius: 20px; text-align:center;">Add a Player Review</h1>
+ <div style="text-align:center;">
+ 	<br />
+<label>
+<span>Your Best Player:</span><input type="text" name="player"><br>
+</label>
+<br /><br />
+  <label>
+<span>Teams:</span><input type="text" name="team"><br>
+</label>
+<br /><br />
+ <label>
+<span>Rating out of 10:</span><input type="text" name="rating"><br>
+</label>
+<br /><br />
+ <label>
+<span>Description the player in your own words:</span><input type="text" name="description"><br>
+</label>
+<br /><br />
+
+
+<input type="submit">
+</form>
+</div>
 			</div>
 		</div>
 		
@@ -159,6 +177,7 @@
 		
 		
 		<div  class="alt4 col-md-12" id="fixtures">
+			<br />
 			<h1 style="background-color:#6092CF;margin-left:30px;color: white; border-radius: 20px; text-align:center;">Fixtures</h1>
 			<br/>
 			
@@ -182,16 +201,76 @@
 	<br />
 		<br />
 		<hr />
-		<div class="row padding" id="three">
-			<div class="col-md-6">
-				<img src="images/3.png" class="img-circle img-responsive" alt="Circular holding image"/>
-			</div>
-			<div class="col-md-6">
-				<h2 class="text-center">RSS FEEDS</h2>
-				<p class="text-justify">i love you</p>	
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="row padding" id="three">
+			<div class="col-md-12">
+			<button type="button" onclick="loadDoc()">Get my CD collection</button>
+<br><br>
+<table id="demo"></table>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      myFunction(xhttp);
+    }
+  };
+  xhttp.open("GET", "cd.xml", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>NAME</th><th>POSITION</th><th>NUMBER</th><th>COUNTRY</th><th>AGE</th><th>NATIONALITY</th></tr>";
+  var x = xmlDoc.getElementsByTagName("PLAYERS");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("POSITION")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+     x[i].getElementsByTagName("NUMBER")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+     x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+     x[i].getElementsByTagName("AGE")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+     x[i].getElementsByTagName("NATIONALITY")[0].childNodes[0].nodeValue +
+    "</td></tr>" ;
+    ;
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+
+			
 			</div>
-		</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	
 		<hr />
 	</div>
 
@@ -225,6 +304,8 @@
 	
 	
 	<div class="container padding" id="contact">
+		<h1 style="background-color:#6092CF;margin-left:30px;color: white; border-radius: 20px; text-align:center;">Feedback</h1>
+		<br />
 		<form role="form" method="post">
 			<div class="form-group">
 				<label for="email">Email:</label>
