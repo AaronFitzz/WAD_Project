@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!--The bootspray template was taking online
+		https://github.com/SamCogan/bootstrap1 -->
+		
 		<title>SoccerArmy</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		
 		<!-- Javascript and css link to for the javascript slide -->
+		<!--	http://www.menucool.com/javascript-image-slider -->
 		<link href="themes/8/js-image-slider.css" rel="stylesheet" type="text/css" />
 		<script src="themes/8/js-image-slider.js" type="text/javascript"></script>
 		<link href="themes/8/tooltip.css" rel="stylesheet" type="text/css" />
@@ -28,7 +32,7 @@
 			</button>
 			<div class="collapse navbar-collapse navHeaderCollapse">
 				<h4 class="nav navbar-nav navbar-right">
-					<li><a href="#">Home</a></li>
+					<li><a href="#Home">Home</a></li>
 					<li><a href="#players">Players</a></li>
 					<li><a href="#review">Review</a></li>
 					<li><a href="#fixtures">Fixtures</a></li>
@@ -36,11 +40,16 @@
 				</h4>
 			</div>
 		</div>
-	</div>
-		<br />
-		<br />
-	<div class="jumbotron">
+	</div> 
 	
+
+	
+		<br />
+		<br />
+		
+			<!--Parts of the following code were sourced from menucool
+			http://www.menucool.com/javascript-image-slider -->
+	<div class="jumbotron">
 	<div id="sliderFrame">
         <div id="slider">
             <img src="images/cronaldo.jpg" alt="#cap1" />
@@ -77,7 +86,7 @@
 			<p>We hope you enjoy</p>
 			<p>Remember to leave feedback!</p>
 			<br />
-			<p><a href="#contact" target="" class="btn btn-primary btn-lg">Take me to the feedback form</a></p>
+			<p><a href="#contact" target="" class="btn btn-primary btn-lg" style="color:white;">Take me to the feedback form</a></p>
 			</div>
 		</div>
 	</div>
@@ -89,6 +98,9 @@
 	<div class="container">
 		<h1 style="background-color:#6092CF;margin-left:30px;color: white; border-radius: 20px; text-align:center;">Soccer Players</h1>
 	
+	
+	<!--Parts of the following code were sourced from runnable
+		http://code.runnable.com/UnDUlCvY6jFuAACr/how-to-transform-xsl-to-xml-using-php-for-xslt -->
 			<?php
 			
 			// Load the XML source
@@ -105,8 +117,51 @@
 			echo $proc->transformToXML($xml);
 			
 			?>
+			<br />
+				<br />
+					<div class="row padding" id="three">
+			<div class="col-md-12" style="text-align:center;">
+				<br/><br/><button  type="button" onclick="loadDoc()">View Manchester United Player Details</button>
+			<table id="demo" style="text-align:center;"></table>
+			<!--
+			Parts of the following code were sourced from W3Schools
+			URL: http://www.w3schools.com/xml/xml_applications.asp -->
+			<script>
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      myFunction(xhttp);
+    }
+  };
+  xhttp.open("GET","index.xml", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Name</th><td>&nbsp;</td><th>Position</th><td>&nbsp;</td><th>Number</th><td>&nbsp;</td><th>Age</th><td>&nbsp;</td><th>Nationality</th></tr>";
+  var x = xmlDoc.getElementsByTagName("player");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+    "</td><td>&nbsp;</td><td>" +
+    x[i].getElementsByTagName("position")[0].childNodes[0].nodeValue +
+    "</td><td>&nbsp;</td><td>" +
+     x[i].getElementsByTagName("number")[0].childNodes[0].nodeValue +
+    "</td><td>&nbsp;</td><td>" +
+     x[i].getElementsByTagName("age")[0].childNodes[0].nodeValue +
+    "</td><td>&nbsp;</td><td>" +
+     x[i].getElementsByTagName("nationality")[0].childNodes[0].nodeValue +
+    "</td><td>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
 	</div>
 	</div>
+	
 <hr />
 	<div class="container">
 		<div class="row">
@@ -146,29 +201,35 @@
 		<div class="row padding" id="one">
 			<div class="col-md-12">
 				<form action="indexuser.php" method="post">
-					<h1 style="background-color:#6092CF;margin-left:30px;color: white; border-radius: 20px; text-align:center;">Add a Player Review</h1>
- <div style="text-align:center;">
- 	<br />
-<label>
-<span>Your Best Player:</span><input type="text" name="player"><br>
-</label>
-<br /><br />
-  <label>
-<span>Teams:</span><input type="text" name="team"><br>
-</label>
-<br /><br />
- <label>
-<span>Rating out of 10:</span><input type="text" name="rating"><br>
-</label>
-<br /><br />
- <label>
-<span>Description the player in your own words:</span><input type="text" name="description"><br>
-</label>
-<br /><br />
-
+									<h1 style="background-color:#6092CF;margin-left:30px;color: white; border-radius: 20px; text-align:center;">Add a Player Review</h1>
+				 <div style="text-align:center;">
+				 	<br />
+				<label>
+				<span>Your Best Player:</span><input type="text" name="player"><br>
+				</label>
+				<br /><br />
+				  <label>
+				<span>Teams:</span><input type="text" name="team"><br>
+				</label>
+				<br /><br />
+				 <label>
+				<span>Rating out of 10:</span><input type="text" name="rating"><br>
+				</label>
+				<br /><br />
+				 <label>
+				<span>Description the player in your own words:</span><input type="text" name="description"><br>
+				</label>
+				<br /><br />
 
 <input type="submit">
+
+
+
 </form>
+
+
+
+
 </div>
 			</div>
 		</div>
@@ -201,76 +262,12 @@
 	<br />
 		<br />
 		<hr />
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<div class="row padding" id="three">
-			<div class="col-md-12">
-			<button type="button" onclick="loadDoc()">Get my CD collection</button>
-<br><br>
-<table id="demo"></table>
-
-<script>
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      myFunction(xhttp);
-    }
-  };
-  xhttp.open("GET", "cd.xml", true);
-  xhttp.send();
-}
-function myFunction(xml) {
-  var i;
-  var xmlDoc = xml.responseXML;
-  var table="<tr><th>NAME</th><th>POSITION</th><th>NUMBER</th><th>COUNTRY</th><th>AGE</th><th>NATIONALITY</th></tr>";
-  var x = xmlDoc.getElementsByTagName("PLAYERS");
-  for (i = 0; i <x.length; i++) { 
-    table += "<tr><td>" +
-    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("POSITION")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-     x[i].getElementsByTagName("NUMBER")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-     x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-     x[i].getElementsByTagName("AGE")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-     x[i].getElementsByTagName("NATIONALITY")[0].childNodes[0].nodeValue +
-    "</td></tr>" ;
-    ;
-  }
-  document.getElementById("demo").innerHTML = table;
-}
-</script>
-
-			
-			</div>
-			</div>
-			
-			
-			
-			
-			
-			
-			
-			
-		
 	
+		
+<br><br>
+
+			</div>
+			</div>
 		<hr />
 	</div>
 
@@ -280,10 +277,10 @@ function myFunction(xml) {
 			<?php
 		// Load the XML source
 			$xml = new DOMDocument;
-			$xml->load('latest.xml');
+			$xml->load('rss.xml');
 			
 			$xsl = new DOMDocument;
-			$xsl->load('latest2.xsl');
+			$xsl->load('rss.xsl');
 			
 			// Configure the transformer
 			$proc = new XSLTProcessor;
@@ -304,6 +301,9 @@ function myFunction(xml) {
 	
 	
 	<div class="container padding" id="contact">
+		
+		
+
 		<h1 style="background-color:#6092CF;margin-left:30px;color: white; border-radius: 20px; text-align:center;">Feedback</h1>
 		<br />
 		<form role="form" method="post">
@@ -322,6 +322,7 @@ function myFunction(xml) {
 			</div>
 			<button type="submit" class="btn btn-default" name="submit" value="Submit">Submit</button>
 			
+
 		</form>
 		
 		
@@ -367,7 +368,7 @@ function myFunction(xml) {
 	<script src="js/bootstrap.js"></script>
 	<script>
 	$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
+  $('a[href*=#]:not([href=#home])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');

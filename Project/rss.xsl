@@ -3,7 +3,7 @@
 <xsl:template match="/rss">
 	<html>
 		<head>
-		 <link href="xsl.css" rel="stylesheet" type="text/css" />
+		 <link href="css/xsl.css" rel="stylesheet" type="text/css" />
         <style type="text/css">
             body { font-size:1.34em; }
         </style>

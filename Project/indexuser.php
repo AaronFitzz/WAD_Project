@@ -4,7 +4,7 @@
  * PHP SimpleXML
  * Loading a XML from a file, adding new elements and editing elements
  */
-//get author from form
+//get author from form class example code
 $player = $_POST["player"];
 $team = $_POST["team"];
 $rating = $_POST["rating"];
