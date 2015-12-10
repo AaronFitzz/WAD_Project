@@ -6,14 +6,14 @@
 		
 		<title>SoccerArmy</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="Project/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="Project/css/style.css" />
 		
 		<!-- Javascript and css link to for the javascript slide -->
 		<!--	http://www.menucool.com/javascript-image-slider -->
-		<link href="themes/8/js-image-slider.css" rel="stylesheet" type="text/css" />
-		<script src="themes/8/js-image-slider.js" type="text/javascript"></script>
-		<link href="themes/8/tooltip.css" rel="stylesheet" type="text/css" />
+		<link href="Project/themes/8/js-image-slider.css" rel="stylesheet" type="text/css" />
+		<script src="Project/themes/8/js-image-slider.js" type="text/javascript"></script>
+		<link href="Project/themes/8/tooltip.css" rel="stylesheet" type="text/css" />
 		
 		
 		
@@ -21,11 +21,11 @@
 
 
 	</head>
-	<body>
+	<body id="Home">
 	<div class="navbar-static-top navbar-inverse" id="home" style="position: fixed; width:100%;">
 		<div class="container">
 			<div class="navbar-brand">
-				<img src="images/wadlogo.png"/>
+				<img src="Project/images/wadlogo.png"/>
 			</div>
 			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
 				Menu
@@ -52,11 +52,11 @@
 	<div class="jumbotron">
 	<div id="sliderFrame">
         <div id="slider">
-            <img src="images/cronaldo.jpg" alt="#cap1" />
-            <img src="images/rooney.jpg" alt="#cap2" />
-            <img src="images/azeez.jpg" alt="#cap3" />
-            <img src="images/neymar.jpg" alt="#cap4" />
-            <img src="images/SERGIO.jpg" alt="#cap5" />
+            <img src="Project/images/cronaldo.jpg" alt="#cap1" />
+            <img src="Project/images/rooney.jpg" alt="#cap2" />
+            <img src="Project/images/azeez.jpg" alt="#cap3" />
+            <img src="Project/images/neymar.jpg" alt="#cap4" />
+            <img src="Project/images/SERGIO.jpg" alt="#cap5" />
         </div>
         <div style="display: none;">
             <div id="cap5">
@@ -169,7 +169,7 @@ function myFunction(xml) {
 			<div class="col-md-4">
 				<h2 class="text-center">Athletics</h2>
 				<p class="text-justify">Oscar Pistorius is to appeal to South Africa's highest court after he was convicted of his girlfriend's murder. </p>
-				<img src="images/oscar.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+				<img src="Project/images/oscar.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
 				<h1  style="text-align:center;">
 				<a href="http://www.skysports.com/more-sports/athletics/news/29172/10092938/oscar-pistorius-to-appeal-murder-conviction-at-constitutional-court" class="btn btn-default" target="_blank">Tell me more..</a>
 				</h1>
@@ -177,7 +177,7 @@ function myFunction(xml) {
 			<div class="col-md-4">
 				<h2 class="text-center">Football</h2>
 				<p class="text-justify">Lukaku proud of milestone</p><br/><br/>
-				<img src="images/l.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+				<img src="Project/images/l.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
 				<h1  style="text-align:center;">
 				<a href="http://www.skysports.com/football/news/11671/10092969/romelu-lukaku-happy-to-have-rescued-point-for-everton-against-crystal-palace" class="btn btn-default" target="_blank">Tell me more..</a>
 				</h1>
@@ -185,7 +185,7 @@ function myFunction(xml) {
 			<div class="col-md-4">
 				<h2 class="text-center">Football</h2>
 				<p class="text-justify">Sir Alex: Leicester can win title</p><br/><br/>
-				<img src="images/jamie.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
+				<img src="Project/images/jamie.jpg" class="img-circle img-responsive" alt="Circular holding image"/>
 				<h1  style="text-align:center;">
 				<a href="http://www.skysports.com/football/news/11712/10092532/sir-alex-ferguson-says-leicester-city-can-win-the-premier-league" class="btn btn-default" target="_blank">Tell me more..</a>
 				</h1>
@@ -365,7 +365,7 @@ function myFunction(xml) {
 	</div>
 	
 	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="js/bootstrap.js"></script>
+	<script src="Project/js/bootstrap.js"></script>
 	<script>
 	$(function() {
   $('a[href*=#]:not([href=#home])').click(function() {
